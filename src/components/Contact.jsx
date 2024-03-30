@@ -22,7 +22,7 @@ const Contact = () => {
     setForm({ ...form, [name]: value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     if (loading) {
       return;
@@ -32,29 +32,61 @@ const Contact = () => {
       return;
     }
     setLoading(true)
-    emailjs.send(
-      process.env.EMAILJS_SERVICE_ID,
-      process.env.EMAILJS_TEMPLATE_ID,
-      {
-        from_name: form.name,
-        to_name: 'Gagan',
-        from_email: form.email,
-        to_email: process.env.EMAILJS_TO_EMAIL,
-        message: form.message
-      },
-      process.env.EMAILJS_PUBLIC_KEY
-    )
-      .then(
-        () => {
-          setLoading(false)
-          alert('Thank you, I will get back to you asap!')
-        },
-        err => {
-          setLoading(false)
-          console.error(err)
-          alert('Something went wrong')
+    let res
+    let svcId
+    let templId
+    let toEmail
+    let publicKey
+
+    try {
+      res = await fetch('https://env-var-api.onrender.com/env/var', {
+        method: 'POST',
+        body: JSON.stringify({
+          "keys": [
+            'EMAILJS_SERVICE_ID',
+            'EMAILJS_TEMPLATE_ID',
+            'EMAILJS_TO_EMAIL',
+            'EMAILJS_PUBLIC_KEY'
+          ]
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept-Encoding': 'application/json'
         }
+      })
+    } catch (e) {
+      alert('Something went wrong')
+      console.error(e)
+      setLoading(false)
+      return;
+    }
+
+    let resp = await res.json()
+
+    svcId = resp['EMAILJS_SERVICE_ID']
+    templId = resp['EMAILJS_TEMPLATE_ID']
+    toEmail = resp['EMAILJS_TO_EMAIL']
+    publicKey = resp['EMAILJS_PUBLIC_KEY']
+    try {
+      res = await emailjs.send(
+        svcId,
+        templId,
+        {
+          from_name: form.name,
+          to_name: 'Gagan',
+          from_email: form.email,
+          to_email: toEmail,
+          message: form.message
+        },
+        publicKey
       )
+      alert('Thank you, I will get back to you asap!')
+    } catch (e) {
+      alert('Something went wrong')
+      console.error(e)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
