@@ -51,7 +51,7 @@ const Contact = () => {
         },
         err => {
           setLoading(false)
-          console.error(error)
+          console.error(err)
           alert('Something went wrong')
         }
       )
