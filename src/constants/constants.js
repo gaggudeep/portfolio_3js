@@ -23,6 +23,11 @@ import {
   jobit,
   tripguide,
   threejs,
+  acko,
+  tiket,
+  go,
+  java,
+  spring,
 } from "../assets"
 
 export const navLinks = [
@@ -42,24 +47,36 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "MongoDB/PostgreSQL",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Kafka",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Redis",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "RabbitMQ",
     icon: creator,
   },
 ]
 
 const technologies = [
+  {
+    name: "GO",
+    icon: go
+  },
+  {
+    name: "JAVA",
+    icon: java
+  },
+  {
+    name: "Spring boot",
+    icon: spring
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -105,10 +122,6 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
-  },
-  {
     name: "docker",
     icon: docker,
   },
@@ -116,57 +129,33 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Software Engineer II",
+    company_name: "Tiket",
+    icon: tiket,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "May 2022 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Spearheaded efforts to enhance the flights system caching mechanism, resulting in a projected increase in cache hits by 80%.",
+      "Pioneered the design and development of automated exchange flow, enabling users to effortlessly swap their original bookings for new ones, resulting in a 20% reduction in customer support costs.",
+      "Successfully integrated multiple third-party travel reservation systems, improving the company's ability to search, book, and issue flights, leading to a 10% boost in revenue.",
+      "Implemented optimizations for API latencies, achieving reductions of up to 50% by eliminating redundant third-party API calls, implementing efficient caching techniques, and introducing concurrency mechanisms.",
+      "Proactively resolved multiple bugs, resulting in an improved user experience and seamless interaction.",
+      "Played a pivotal role in training and mentoring interns and new team members, ensuring clear understanding and proficiency in complex technological tasks.",
+      "Took interviews skillfully selecting and onboarding highly skilled individuals to build a talented and capable workforce."
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Software Engineer",
+    company_name: "Acko",
+    icon: acko,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Sep 2020 - May 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed health insurance APIs, streamlining the process of purchasing health insurance policies which resulted in 30% increase in company Gross Business Value (GBV) and a 9% boost in profits.",
+      "Solutioned and implemented an automation framework, enhancing the efficiency of end-to-end product testing procedures.By automating repetitive tasks, this innovation led to a 10 % reduction in labor costs while ensuring quality.",
+      "Successfully integrated BrowserStack with the existing JavaScript framework, introducing virtual device capabilities that eliminated the need for physical devices which resulted in a 4% decrease in company expenses, while maintaining optimal testing conditions for enhanced product quality."
     ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  }
 ]
 
 const testimonials = [

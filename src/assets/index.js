@@ -20,11 +20,16 @@ import redux from "./tech/redux.png"
 import tailwind from "./tech/tailwind.png"
 import typescript from "./tech/typescript.png"
 import threejs from "./tech/threejs.svg"
+import go from "./tech/go.png"
+import java from "./tech/java.png"
+import spring from "./tech/spring.png"
 
 import meta from "./company/meta.png"
 import shopify from "./company/shopify.png"
 import starbucks from "./company/starbucks.png"
 import tesla from "./company/tesla.png"
+import acko from "./company/acko.png"
+import tiket from "./company/tiket.png"
 
 import carrent from "./carrent.png"
 import jobit from "./jobit.png"
@@ -59,4 +64,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  acko,
+  tiket,
+  go,
+  java,
+  spring,
 }
