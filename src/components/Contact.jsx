@@ -36,16 +36,16 @@ const Contact = () => {
     }
     setLoading(true)
     emailjs.send(
-      'portfolio',
-      'template_s044i9j',
+      process.env.EMAILJS_SERVICE_ID,
+      process.env.EMAILJS_TEMPLATE_ID,
       {
         from_name: form.name,
         to_name: 'Gagan',
         from_email: form.email,
-        to_email: 'gagandeepsinghjubbal@gmail.com',
+        to_email: process.env.EMAILJS_TO_EMAIL,
         message: form.message
       },
-      'O1ByBfabhObLHoi27'
+      process.env.EMAILJS_PUBLIC_KEY
     )
       .then(
         () => {
