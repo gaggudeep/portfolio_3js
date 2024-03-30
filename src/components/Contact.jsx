@@ -27,7 +27,8 @@ const Contact = () => {
     if (loading) {
       return;
     }
-    if (form.message.trim().length() == 0) {
+    if (form.message.trim().length == 0) {
+      alert("Message cannot be empty")
       return;
     }
     setLoading(true)
