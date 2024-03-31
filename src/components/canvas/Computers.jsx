@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei'
 
@@ -29,25 +29,7 @@ const Computers = ({ isMobile }) => {
   )
 }
 
-const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 500px)')
-
-    setIsMobile(mediaQuery.matches)
-
-    const handleMedialQueryChange = (event) => {
-      setIsMobile(event.matches)
-    }
-
-    mediaQuery.addEventListener('change', handleMedialQueryChange)
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleMedialQueryChange)
-    }
-  }, [])
-
+const ComputersCanvas = ({ isMobile }) => {
   return (
     <Canvas
       frameloop="demand"

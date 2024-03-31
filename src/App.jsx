@@ -3,31 +3,48 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   Tech,
-  Works,
   StarsCanvas,
 } from "./components"
+import { useEffect, useState } from "react"
 
 const App = () => {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 500px)')
+
+    setIsMobile(mediaQuery.matches)
+
+    const handleMedialQueryChange = (event) => {
+      setIsMobile(event.matches)
+    }
+
+    mediaQuery.addEventListener('change', handleMedialQueryChange)
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMedialQueryChange)
+    }
+  }, [])
+
   return (
     <BrowserRouter>
       <div className="bg-primary relative z-0">
         <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
           <Navbar />
-          <Hero />
+          <Hero isMobile={isMobile} />
         </div>
         <About />
         <Experience />
-        <Tech />
-        <div className="relative z-0">
+        <Tech isMobile={isMobile} />
+        < div className="relative z-0">
           <Contact />
           <StarsCanvas />
         </div>
       </div>
-    </BrowserRouter>
+    </BrowserRouter >
   )
 }
 
