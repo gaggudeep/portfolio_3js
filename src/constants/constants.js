@@ -17,6 +17,8 @@ import {
   threejs,
   acko,
   tiket,
+  verve,
+  gemini,
   go,
   java,
   spring,
@@ -113,11 +115,35 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Senior Engineer III",
+    company_name: "Verve Group",
+    icon: verve,
+    iconBg: "#1a1a1a",
+    date: "Oct 2024 - Present",
+    points: [
+      "Architected the Verve Identity Graph (VIG) — a BigQuery-backed central ID resolution pipeline consolidating device IDs, HEM, and Experian signals from Sessionizer and partner sources, with automated GCS export feeding the downstream amplification and serving path.",
+      "Engineered Spark amplification to fan all DSP audience segments against the unified VIG graph, replacing fragmented per-vendor silo graphs and extending cross-device reach across every onboarded partner.",
+      "Integrated Gemini LLM into the taxonomy classification service and prototyped RAG-based enrichment for the Fusion Persona AI API; built phased rollout infrastructure with sticky device-level config support on Kubernetes.",
+      "Onboarded DSP partners end-to-end — daily S3 ingestion, Kubernetes cron orchestration via ArgoCD, Taxonomy API metadata sync to MySQL, and VAS offline audience exports on the P+ stack.",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company_name: "Gemini",
+    icon: gemini,
+    iconBg: "#0B1426",
+    date: "Jul 2024 - Oct 2024",
+    points: [
+      "Engineered a company-wide event streaming library using Apache Kafka in Java, which streamlined event distribution and ingestion across services.",
+      "Developed and optimized gRPC APIs in Java, significantly improving inter-service communication efficiency and reliability.",
+    ],
+  },
+  {
     title: "Software Engineer II",
     company_name: "Tiket",
     icon: tiket,
     iconBg: "#383E56",
-    date: "May 2022 - Present",
+    date: "Apr 2022 - Jul 2024",
     points: [
       "Spearheaded efforts to enhance the flights system caching mechanism, resulting in a projected increase in cache hits by 80%.",
       "Pioneered the design and development of automated exchange flow, enabling users to effortlessly swap their original bookings for new ones, resulting in a 20% reduction in customer support costs.",
@@ -133,7 +159,7 @@ const experiences = [
     company_name: "Acko",
     icon: acko,
     iconBg: "#E6DEDD",
-    date: "Sep 2020 - May 2022",
+    date: "Oct 2020 - Apr 2022",
     points: [
       "Developed health insurance APIs, streamlining the process of purchasing health insurance policies which resulted in 30% increase in company Gross Business Value (GBV) and a 9% boost in profits.",
       "Solutioned and implemented an automation framework, enhancing the efficiency of end-to-end product testing procedures.By automating repetitive tasks, this innovation led to a 10 % reduction in labor costs while ensuring quality.",

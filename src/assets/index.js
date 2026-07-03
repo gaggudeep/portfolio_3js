@@ -26,6 +26,8 @@ import spring from "./tech/spring.png"
 
 import acko from "./company/acko.png"
 import tiket from "./company/tiket.png"
+import verve from "./company/verve.svg"
+import gemini from "./company/gemini.svg"
 
 import carrent from "./carrent.png"
 import jobit from "./jobit.png"
@@ -56,6 +58,8 @@ export {
   jobit,
   acko,
   tiket,
+  verve,
+  gemini,
   go,
   java,
   spring,
