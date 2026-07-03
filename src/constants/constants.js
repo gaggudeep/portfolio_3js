@@ -110,7 +110,8 @@ const experiences = [
       "Integrated Gemini LLM into the taxonomy classification service and prototyped RAG-based enrichment for the Fusion Persona AI API; built phased rollout infrastructure with sticky device-level config support on Kubernetes.",
       "Onboarded DSP partners end-to-end — daily S3 ingestion, Kubernetes cron orchestration via ArgoCD, Taxonomy API metadata sync to MySQL, and VAS offline audience exports on the P+ stack.",
       "Designed and built the backend suggestions API for Fusion Labs (audience exploration product) — accepts raw insights context and fusionId, calls an internal LLM service, and returns dynamic audience recommendations to partners and internal teams.",
-      "Deployed a Prometheus-based observability layer across VAS, taxonomy, ScyllaDB, and VIG pipelines covering latency, SLA breaches, and data anomalies; added AI-driven KPI trend alerting and migrated alert routing from PagerDuty to Slack.",
+      "Deployed a Prometheus-based observability layer across VAS, taxonomy, ScyllaDB, and VIG pipelines covering latency, SLA breaches, and data anomalies; migrated alert routing from PagerDuty to Slack and built AI-driven KPI trend anomaly detection.",
+      "Contributed to an Agentic Monitoring tool — a configuration-driven AI agent that reasons over end-to-end production system state, auto-generates contextual alerts, and surfaces debugging guidance, reducing manual investigation overhead.",
     ],
   },
   {
